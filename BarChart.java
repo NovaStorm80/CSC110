@@ -3,11 +3,6 @@ public class BarChart
 {
 	public static void main(String[] arg)
 	{
-		//----- Declared Variables
-		String asterix = "*",
-			   barLine = "|";
-
-
 		int  count = 0,
 		  numCount = 0,
 			sales1 = 0,
@@ -28,46 +23,59 @@ public class BarChart
 
 		//----- Calculations
 		System.out.print("Store 1: ");
-		while ( numCount <= sales1)
+		while ( numCount < sales1)
 		{
-			if (count == 9){
-			System.out.print("|");
-			 numCount += 100;
-			 count = 1;
-	       }else
-			System.out.print("*");
-			 numCount += 100;
-			 count ++;
+			if (count == 9)
+			{
+				System.out.print("|");
+				numCount += 100;
+				count = 0;
+			}
+			else
+			{
+				System.out.print("*");
+				numCount += 100;
+				count++;
+			}
 		}// ---- Store Sales 1
 		count    = 0;
 		numCount = 0;
 
 		System.out.print("\nStore 2: ");
-		while ( numCount <= sales2)
-				{
-					if (count == 9){
-					System.out.print("|");
-					 numCount += 100;
-					 count = 1;
-			       }else
-					System.out.print("*");
-					 numCount += 100;
-					 count ++;
-				}// ---- Store Sales 2
+		while ( numCount < sales2)
+		{
+			if (count == 9)
+			{
+				System.out.print("|");
+				numCount += 100;
+				count = 0;
+			}
+			else
+			{
+				System.out.print("*");
+				numCount += 100;
+				count++;
+			}
+		}// ---- Store Sales 2
+		
 		count    = 0;
-		numCount = 100;
+		numCount = 0;
 
 		System.out.print("\nStore 3: ");
-		while ( numCount <= sales3)
-				{
-					if (count == 9){
-					System.out.print("|");
-					 numCount += 100;
-					 count = 1;
-			       }else
-					System.out.print("*");
-					 numCount += 100;
-					 count ++;
-				}// ---- Store Sales 3
+		while ( numCount < sales3)
+		{
+			if (count == 9)
+			{
+				System.out.print("|");
+				numCount += 100;
+				count = 0;
+			}
+			else
+			{
+				System.out.print("*");
+				numCount += 100;
+				count++;
+			}
+		}// ---- Store Sales 3
 	}// --- end main
 }// --- end pgm
