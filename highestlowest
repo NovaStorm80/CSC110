@@ -1,0 +1,56 @@
+
+package testscores;
+
+import java.util.*;
+
+public class TestScores {
+
+    public static void main(String[] args) {
+        
+        // declare variables
+        Boolean test = true;
+        String userInput;
+        String yesNo;
+        ArrayList tests = new ArrayList();
+        int i = 1;
+        int highestScore = 0;
+        int lowestScore = 0;
+              
+        // welcome message
+        System.out.println("Welcome to my test grader");
+        
+        // Scanner
+        Scanner keyboard = new Scanner(System.in);
+        
+        // while loop
+        while (test == true) {
+            
+            System.out.println("Please enter a score for test " + i);
+            userInput = keyboard.nextLine();
+            
+            // adds userInput value to the arrayList
+            tests.add(userInput);
+                        
+            // ask user if he/she wants to add any more tests
+            System.out.println("Any more tests? (Y/N) ");
+            yesNo = keyboard.nextLine();
+            
+            if (yesNo.equals("N") || yesNo.equals("n")) { // checks uppercase and lowercase symbols
+                test = false; // sets test variable to false, ending the while loop
+            } else if (yesNo.equals("Y") || yesNo.equals("y")) {
+                i++; // increments the i variable
+            }
+        }
+            
+        // output arrayList size
+        int nbrOfTests = tests.size();
+        System.out.println("Number of Tests: " + nbrOfTests);
+             
+        // output highest score
+        System.out.println("Highest Score: " + Collections.max(tests));
+        
+        // output lowest score
+        System.out.println("Lowest Score: " + Collections.min(tests));
+    }
+    
+}
