@@ -19,6 +19,8 @@ public class FreeDay
 			  active = "yes",
 	       likeWater = "yes",
 		  likeActive = "yes";
+                
+               String outputText = "default";
 
 		//Scanner
 		Scanner keyboard = new Scanner(System.in);
@@ -33,39 +35,30 @@ public class FreeDay
 		System.out.print("Do you like being active?(yes/no): ");
 		likeActive = keyboard.next();
 
-		System.out.println("\nWith the predicted temperature of: " + temp);
-		System.out.println("This program suggests");
-
+		
 		//if statements
-		if (temp >= 70)
+		if (temp >= 70) {
 
-			if (likeWater.equalsIgnoreCase(water))
-				System.out.println("\t\t It's great weather for a boat"
-														+ " ride");
-		else
-
-		if (temp < 70)
-
-			if (temp >= 55)
-				{
-				if (likeActive.equalsIgnoreCase(active))
-					System.out.println("\t\t Tennis will keep you energized");
-
-				else
-					System.out.println("\t\t It is a nice day to watch"
-							+ " a local sporting event");
+			if (likeWater.equalsIgnoreCase(water)) {
+				outputText = "it's great weather for a boat ride";
+                        }
+                }
+                else if (temp >= 55) {
+				if (likeActive.equalsIgnoreCase(active)) {
+					outputText = "tennis will keep you energized";
+                                } else {
+					outputText = "it is a nice day to watch a local sporting event";
 				}
-
-		else
-			{
-			if (temp < 55)
-
-				if (likeActive.equalsIgnoreCase(active))
-					System.out.println("\t\t Try a quick paced walk (or jog)"
-							+ " in this brisk air");
-				else
-					System.out.println("\t\tMake a cup of hot cider and"
-								+ " put up your feet");
+                }
+                else {
+			if (likeActive.equalsIgnoreCase(active)) {
+					outputText = "try a quick paced walk (or jog) in this brisk air";
+                        } else {
+					outputText = "make a cup of hot cider and put up your feet";
 		 	}
+                }
+                
+                System.out.println("\nWith the predicted temperature of: " + temp);
+		System.out.println("This program suggests " + outputText);
 	}
 }
