@@ -47,8 +47,8 @@ public class DinerCalcFormat
 		tipCst = tip * subtotal;
 		total = (subtotal + tax) + tipCst;
 		ctsPerPerson = total / 3;
-		TAX = TAX * 100;
-		tip = tip * 100;
+		TAX = TAX * 100; // not supposed to do this
+		tip = tip * 100; // not supposed to do this
 
 		// --------------   output/ end Msg  --------------
 		System.out.println("\n\n\t = = = = =  Bill Summary = = = =" );
