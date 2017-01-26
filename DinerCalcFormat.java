@@ -22,7 +22,7 @@ public class DinerCalcFormat
 		       ctsPerPerson = 0.0,
 			   total 	    = 0.0;
 
-		Double TAX = 0.0575;
+		Double TAX = 0.0575; //-- supposed to be a final
 
 		// --------- Scanner
 		Scanner keyboard = new Scanner(System.in);
