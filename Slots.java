@@ -37,7 +37,8 @@ public class Slots
 		Random rn = new Random();
 
 		//--------   Welcome and Get Inpu ----------
-		System.out.println("\t * * *  Welcome to Number generator * * * ");
+		System.out.println("");
+		System.out.println("\t * * *  Welcome to Slots * * * ");
 		System.out.println("");
 		System.out.print("Enter amount of money to play: ");
 		money = keyboard.nextInt();
@@ -137,7 +138,7 @@ public class Slots
 					if (sameR > same)
 						same = sameR;
 
-					System.out.print("\t" + msg);
+					System.out.print(msg + "\t");
 					cntNum++;
 			}// inner while
 		// ------- processes for finding bet winnings
@@ -167,6 +168,11 @@ public class Slots
 			if (same > 2)
 				System.out.println("\n\nyou WIN: " + bet);
 
+			else if (same == 5)
+				{
+					System.out.println(" * * * You hit the JACKPOT * * *");
+					System.out.println("\n\nyou WIN: " + bet);
+				}
 			else
 			{
 				System.out.println("\n\nNo matches, sorry you lost");
@@ -209,4 +215,3 @@ public class Slots
 		System.out.println("Thanks for playing the SLOTs"  );
 	}// end main()
 } // end pgm
-
