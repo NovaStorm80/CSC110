@@ -12,18 +12,18 @@ public class Slots
 	public static void main(String[] arg)
 	{
 		//---------- declare vars----------------------
-		int		upperLim 	= 5,
-				num         = 0,
-				same        = 0,
-				sameC       = 0,
-				sameO       = 0,
-				sameP       = 0,
-				sameB       = 0,
-				sameM       = 0,
-				sameR       = 0,
-		        cntNum		= 0,
-		        numOfNum	= 5,
-		        randNum		= 0;
+		int	upperLim    = 5,
+			num         = 0,
+			same        = 0,
+			sameC       = 0,
+			sameO       = 0,
+			sameP       = 0,
+			sameB       = 0,
+			sameM       = 0,
+			sameR       = 0,
+		        cntNum	    = 0,
+		        numOfNum    = 5,
+		        randNum	    = 0;
 
 		double  money       = 0,
 		        bet         = 0;
