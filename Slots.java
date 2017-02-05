@@ -1,11 +1,12 @@
+//======================================================================
+//  Author:   Zechariah Ziebart                             csc-111   A
+//  Date Due: Feb. 9, 2017
+//  Assign:           assign-05:  Applicatons Review
+//  Program:   Slots
+//  Purpose:
+//    Creating a slot machine using random number generation
+//======================================================================
 import java.util.*;            // Scanner
-
-//--------------------------------------------------------------------------------------------
-//  Demo Random
-//     A random number is generated from 0 to an upper limit of you choice
-//     To generate a range from 1 - a limit, 1 is added to number generated.
-//--------------------------------------------------------------------------------
-
 public class Slots
 {
 	public static void main(String[] arg)
@@ -22,8 +23,9 @@ public class Slots
 				sameR       = 0,
 		        cntNum		= 0,
 		        numOfNum	= 5,
-		        randNum		= 0,
-		        money       = 0,
+		        randNum		= 0;
+
+		double  money       = 0,
 		        bet         = 0;
 
 		String  msg = "",
@@ -48,9 +50,9 @@ public class Slots
 			//------- Validation
 			while (bet > money)
 			{
-				System.out.println("\tThe amount you have entered is more then you have.");
-				System.out.printf("The available money you have is $%.0f", money);
-				System.out.print("Re-enter your bet: ");
+				System.out.println("\tInvalid bet of : " + bet);
+				System.out.println("\tFunds Available: " + money);
+				System.out.print("\tRe-enter bet   : ");
 				bet = keyboard.nextInt();
 			}
 			cntNum = 0;
@@ -205,7 +207,6 @@ public class Slots
 		System.out.println("Game over, cash out: " + money);
 		System.out.println("");
 		System.out.println("Thanks for playing the SLOTs"  );
-
 	}// end main()
 } // end pgm
 
